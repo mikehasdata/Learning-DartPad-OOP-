@@ -1,0 +1,25 @@
+//learning what control flow and switch statements are with andrea
+
+void main() {
+  
+  printError(NetworkError.badUrl);
+}
+enum NetworkError {
+  badUrl,
+  timeout,
+  resourceNotAvailable,
+}
+
+void printError(NetworkError error) {
+  switch(error) {
+    case NetworkError.badUrl:
+       print('bad url');
+       break;
+    case NetworkError.resourceNotAvailable:
+       print('resource not available');
+       break;
+    case NetworkError.timeout:
+      print('timeout');
+      break;
+  } 
+}
